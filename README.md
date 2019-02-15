@@ -27,18 +27,30 @@ $ move-sqs --help
     --access-key-id, -k  AWS Access Key ID
     --secret-access-key, -S AWS Secret Access Key
 	--merge-json-message-with, -o (OPTIONAL) Merge the json message body with a given json string 
+	
 ```
 
 ## Examples
 
 ### Basis usage:
 `
-$ move-sqs --sourceQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/from-queue" --destinationQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/to-queue" --region "eu-west-1" --accessKeyId "YourAwsAccessKeyId" --secretAccessKey "YourAwsSecretKey"
+$ move-sqs \
+    --sourceQueueUrl \"https://sqs.eu-west-1.amazonaws.com/123456789012/from-queue" \
+    --destinationQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/to-queue" \
+    --region "eu-west-1" \
+    --accessKeyId "YourAwsAccessKeyId" \
+    --secretAccessKey "YourAwsSecretKey"
 `
 
 ### With --merge-json-message-with
 `
-$ move-sqs --sourceQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/from-queue" --destinationQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/to-queue" --region "eu-west-1" --accessKeyId "YourAwsAccessKeyId" --secretAccessKey "YourAwsSecretKey" --merge-json-message-with "{\"someAttribute\": \"weWantToChangeOrSet\"}"
+$ move-sqs \
+    --sourceQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/from-queue" \
+    --destinationQueueUrl "https://sqs.eu-west-1.amazonaws.com/123456789012/to-queue" \
+    --region "eu-west-1" \
+    --accessKeyId "YourAwsAccessKeyId" \
+    --secretAccessKey "YourAwsSecretKey" \
+    --merge-json-message-with "{\"someAttribute\": \"weWantToChangeOrSet\"}"
 `
 
 The `--merge-json-message-with` argument is optional.
