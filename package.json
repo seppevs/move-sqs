@@ -8,7 +8,7 @@
   "main": "src/move-sqs.js",
   "scripts": {
     "test": "jest --silent --coverage",
-    "coveralls": "jest --silent --coverage && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "jest --silent --coverage --coverageReporters=text-lcov | coveralls",
     "lint": "eslint --cache --fix src/ test/"
   },
   "bin": {
