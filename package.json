@@ -14,9 +14,14 @@
   "bin": {
     "move-sqs": "src/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seppevs/move-sqs.git"
+  },
   "preferGlobal": true,
   "keywords": [
     "aws",
+    "amazon",
     "sqs",
     "move",
     "mv",
