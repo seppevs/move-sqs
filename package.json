@@ -1,6 +1,6 @@
 {
   "name": "move-sqs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Move all SQS messages from one queue to another, with an ability to modify the message",
   "engines": {
     "node": "^8.10"
