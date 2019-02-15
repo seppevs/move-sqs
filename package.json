@@ -1,0 +1,77 @@
+{
+  "name": "move-sqs",
+  "version": "0.0.1",
+  "description": "Move all SQS messages from one queue to another, with an ability to modify the message",
+  "engines": {
+    "node": "^8.10"
+  },
+  "main": "src/move-sqs.js",
+  "scripts": {
+    "test": "jest --silent --coverage",
+    "coveralls": "jest --silent --coverage && cat ./coverage/lcov.info | coveralls",
+    "lint": "eslint --cache --fix src/ test/"
+  },
+  "bin": {
+    "move-sqs": "src/cli.js"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "aws",
+    "sqs",
+    "move",
+    "mv",
+    "cli",
+    "messages"
+  ],
+  "author": "Sebastian Van Sande",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.403.0",
+    "change-case": "^3.1.0",
+    "deepmerge": "^3.1.0",
+    "meow": "^5.0.0",
+    "p-limit": "^2.1.0",
+    "p-whilst": "^1.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^24.1.0",
+    "jest-mock-aws": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules/",
+      "test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}

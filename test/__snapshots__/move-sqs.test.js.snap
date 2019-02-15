@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`move-sqs should delete the message from the source queue 1`] = `
+Array [
+  Array [
+    Object {
+      "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/123456789012/the-source-queue",
+      "ReceiptHandle": "receiptHandle001",
+    },
+  ],
+]
+`;
+
+exports[`move-sqs should receive the messages 1`] = `
+Array [
+  Array [
+    Object {
+      "MaxNumberOfMessages": 10,
+      "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/123456789012/the-source-queue",
+      "VisibilityTimeout": 10,
+    },
+  ],
+  Array [
+    Object {
+      "MaxNumberOfMessages": 10,
+      "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/123456789012/the-source-queue",
+      "VisibilityTimeout": 10,
+    },
+  ],
+]
+`;
+
+exports[`move-sqs should send a transformed message to the destination queue when input has \`mergeJsonMessageWith\` specified 1`] = `
+Array [
+  Array [
+    Object {
+      "MessageBody": "{\\"hello\\":\\"world\\",\\"update\\":\\"my update\\"}",
+      "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/123456789012/the-destination-queue",
+    },
+  ],
+]
+`;
+
+exports[`move-sqs should send the original message to the destination queue when input has no \`mergeJsonMessageWith\` specified 1`] = `
+Array [
+  Array [
+    Object {
+      "MessageBody": "{\\"hello\\":\\"world\\"}",
+      "QueueUrl": "https://sqs.eu-west-1.amazonaws.com/123456789012/the-destination-queue",
+    },
+  ],
+]
+`;

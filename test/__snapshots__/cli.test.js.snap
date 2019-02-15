@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli should parse the command line args and invoke the move-sqs function 1`] = `
+Object {
+  "S": "theSecretAccessKey",
+  "accessKeyId": "theAccessKey",
+  "d": "http://the.destination-queue-url.com",
+  "destinationQueueUrl": "http://the.destination-queue-url.com",
+  "k": "theAccessKey",
+  "r": "eu-west-1",
+  "region": "eu-west-1",
+  "s": "http://the.source-queue-url.com",
+  "secretAccessKey": "theSecretAccessKey",
+  "sourceQueueUrl": "http://the.source-queue-url.com",
+}
+`;
