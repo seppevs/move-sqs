@@ -31,7 +31,7 @@
   "author": "Sebastian Van Sande",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.518.0",
+    "aws-sdk": "^2.519.0",
     "change-case": "^3.1.0",
     "deepmerge": "^4.0.0",
     "meow": "^5.0.0",
