@@ -31,18 +31,18 @@
   "author": "Sebastian Van Sande",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.519.0",
+    "aws-sdk": "^2.562.0",
     "change-case": "^3.1.0",
-    "deepmerge": "^4.0.0",
+    "deepmerge": "^4.2.2",
     "meow": "^5.0.0",
     "p-limit": "^2.2.1",
     "p-whilst": "^2.1.0"
   },
   "devDependencies": {
-    "coveralls": "^3.0.6",
-    "eslint": "^6.2.2",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
     "jest": "^24.9.0",
     "jest-mock-aws": "^1.1.0"
