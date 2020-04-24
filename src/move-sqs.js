@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 const deepMerge = require('deepmerge');
 const pWhilst = require('p-whilst');
 const pLimit = require('p-limit');
-const { kebabCase } = require('change-case');
+const { paramCase } = require('change-case');
 
 const MOVE_CONCURRENCY = 65;
 const RECEIVE_PARAMS = { MaxNumberOfMessages: 10, VisibilityTimeout: 10 };
@@ -19,7 +19,7 @@ const validate = (input) => {
   if (missing.length > 0) {
     throw new Error(
       `Missing required arguments: ${missing
-        .map((arg) => kebabCase(arg))
+        .map((arg) => paramCase(arg))
         .join(', ')}`,
     );
   }
